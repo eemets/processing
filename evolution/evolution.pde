@@ -1,9 +1,9 @@
 void setup(){
-  size(600,400);
+  size(800,600);
   reset();
 }
 void draw(){
-  for(int m=0;m<100000;m++){
+  for(int m=0;m<1000000;m++){
     // create onehundredthousand random points
     int a = floor(random(1,width));
     int b = floor(random(1,height));
@@ -51,11 +51,12 @@ void keyPressed(){
   }
   if (key == 's' || key =='S')
   {
-    saveFrame("landscape-###.png");
+    saveFrame("evolution-###.png");
   }
 }
 void reset(){
   background(0);
+  noStroke();
   float edge = 1;// distance from inner to outer circle
   float diam = width/2;
   noFill();
@@ -64,5 +65,5 @@ void reset(){
   ellipse(width/2,height/2,diam-edge,diam-edge);
   stroke(#FF8800);// orange
   ellipse(width/2,height/2,diam+edge,diam+edge);
-//  set(width/2,height/2,color(255));
+  set(width/2,height/2,color(255));
 }

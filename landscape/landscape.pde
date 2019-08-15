@@ -3,7 +3,7 @@ color cClouds,  cFade, cFurther, cCloser, cMist;
 
 void setup()
 {
-  size(800, 600);
+  size(1000, 800);
   smooth();
   
   //define the colors
@@ -56,7 +56,7 @@ void fade(color fadeColor)
 
 void clouds(color cloudColor)
 {  
-  float begin = random(50); //changes the begin of noise each time
+  float begin = random(20); //changes the begin of noise each time
   
   float i = 0; 
   
